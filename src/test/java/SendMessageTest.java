@@ -49,7 +49,7 @@ public class SendMessageTest {
 
     public static Stream<Arguments> sendSource(){
         return Stream.of(
-                //Arguments.of(GeoServiceImpl.LOCALHOST,  new Location(null, null, null, 0), "Добро пожаловать"),
+                Arguments.of(GeoServiceImpl.LOCALHOST,  new Location(null, null, null, 0), null, "Добро пожаловать"),
                 Arguments.of(GeoServiceImpl.MOSCOW_IP,  new Location("Moscow", Country.RUSSIA, "Lenina", 15), Country.RUSSIA, "Добро пожаловать"),
                 Arguments.of(GeoServiceImpl.NEW_YORK_IP, new Location("New York", Country.USA, " 10th Avenue", 32),  Country.USA, "Welcome"),
                 Arguments.of("172.0.0.0", new Location("Moscow", Country.RUSSIA, null, 0), Country.RUSSIA, "Добро пожаловать"),
